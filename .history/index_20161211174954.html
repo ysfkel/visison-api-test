@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="bower_components/jquery/dist/jquery.min.js">
+            
+        </script>
+    </head> 
+    <body>
+    
+    
+        <form>
+                <input type="file" name="" id="fileinput" value="">
+            <button type="" onclick="send()"></button>
+        </form>
+
+
+        
+
+        <script type="text/javascript">
+      
+         
+             function send(){
+                 var input=document.getElementById("fileinput");
+            var formData=FormData();
+            formData.append("userfile",input.files[0]);
+            
+            var url="https://www.microsoft.com/cognitive-services/Demo/VisionDemo/Analysis";
+            var xhr=new XMLHttpRequest();
+            xml.open('post',xhr);
+            xml.send(formData)
+             }
+
+           
+    
+
+
+     /**
+               window.uploadPhotos = function(url){
+  var formData = new FormData();
+
+  // HTML file input, chosen by user
+  var fileInputElement = document.getElementById("takePictureField");
+  formData.append("userfile", fileInputElement.files[0]);
+
+  // JavaScript file-like object
+  var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
+  var blob = new Blob([content], { type: "text/xml"});
+  formData.append("webmasterfile", blob);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  xhr.send(formData);
+     
+     */
+
+
+        </script>
+    </body>
+</html>

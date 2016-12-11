@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script src="bower_components/jquery/dist/jquery.min.js">
+            
+        </script>
+    </head> 
+    <body>
+    
+    
+        <form>
+                <input type="file" name="" id="fileinput" value="">
+            <button type="button" onclick="send()" >send</button>
+        </form>
+
+
+        
+
+        <script type="text/javascript">
+         
+          
+
+
+         //  $(function() {
+   
+
+         
+             function send(){
+       
+          
+             
+                     var params = {
+                        // Specify your subscription key
+                        'subscription-key': '4381a3713ca5467a8a62e57463c61fa1',
+                        // Specify values for optional parameters, as needed
+                        visualFeatures: "All",
+                    };
+
+                    $.ajax({
+                      //  url:"/api/vision",
+                        url: 'https://api.projectoxford.ai/face/v1.0/detect?' + $.param(params),
+                        type: 'post',
+                       // contentType: 'application/json',
+                      //  data: '{ "Url": "https://cdn.pixabay.com/photo/2016/12/04/19/32/strawberry-1882400_1280.jpg" }'
+                    })
+                    .done(function(data) {
+                        alert("success");
+                    })
+                    .fail(function() {
+                        alert("error");
+                    });
+                
+           
+
+
+             }
+
+         //  })
+
+           
+    
+
+
+     /**
+                alert('he')
+                    var input=document.getElementById("fileinput");
+            var formData=new FormData();
+            formData.append("userfile",input.files[0]);
+            
+            var url="https://www.microsoft.com/cognitive-services/Demo/VisionDemo/Analysis";
+            var xhr=new XMLHttpRequest();
+            xhr.open('POST',url);
+            xhr.send(formData)
+     */
+
+
+        </script>
+    </body>
+</html>

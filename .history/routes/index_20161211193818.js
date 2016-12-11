@@ -1,0 +1,49 @@
+var express = require('express');
+var router = express.Router();
+var http = require('http');
+var Client = require('node-rest-client').Client;
+
+var oxford = require('project-oxford'),
+    client = new oxford.Client('7fb073s72bh72663y5ddh129m12e598d');
+
+router.get('/api/vision',function(req,res){
+
+  
+})
+
+
+
+// router.get('/api/vision',function(req,res){
+//       console.log('hello')
+
+//     //   res.json({
+//     //     name:'hi'
+//     //   })
+//     var client = new Client();
+ 
+// // set content-type header and data as json in args parameter 
+// var args = {
+//     data: { test: "hello" },
+//     headers: { "Content-Type": "application/octet-stream","Ocp-Apim-Subscription-Key":"4381a3713ca5467a8a62e57463c61fa1" }
+// };
+ 
+// client.post("https://api.projectoxford.ai/face/v1.0/detect?", args, function (data, response) {
+//     // parsed response body as js object 
+//     console.log(data);
+//     // raw response 
+//     console.log(response);
+//         res.json({
+//         name:'hi'
+//       })
+
+// });
+
+// })
+
+
+
+ 
+
+
+
+module.exports = router;
